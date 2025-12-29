@@ -1,0 +1,78 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Django related
+*.log
+local_settings.py
+db.sqlite3
+media/
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Environment variables
+.env
+.venv
+ENV/
+env.bak/
+venv/
+ENV.bak/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Static and media
+static/
+staticfiles/
+mediafiles/
+
+# Mac/Linux system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
+Desktop.ini
