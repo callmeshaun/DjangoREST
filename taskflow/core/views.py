@@ -1,11 +1,16 @@
 from django.shortcuts import render
 from rest_framework import generics,permissions
 from .models import Task
-from .serializers import TaskSerializers
+from .serializers import  RegisterSerializer,TaskSerializer
+from django.contrib.auth.models import User
 
+class RegisterView(generics.CreateAPIView):
+  queryset=User.objects.all()
+  serializer_class=RegisterSerializer
+  permission_classes=[permissions.AllowAny]
 
 class TaskListCreateView(generics.ListCreateAPIView):
-  serializer_class=TaskSerializers
+  serializer_class=TaskSerializer
   permission_classes=[permissions.IsAuthenticated]
 
   def get_queryset(self):
@@ -16,7 +21,7 @@ class TaskListCreateView(generics.ListCreateAPIView):
 
 
 class TaskDetailView(generics.RetrieveUpdateDestroyAPIView):
-  serializer_class=TaskSerializers
+  serializer_class=TaskSerializer
   permission_classes=[permissions.IsAuthenticated]
   
   def get_queryset(self):
